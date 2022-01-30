@@ -1,0 +1,56 @@
+Ejercicio2
+Inicio
+
+	n, i, j i[0-n]
+	conta, a, b, c, sw i[0-n]
+
+	//Ingreso de datos
+	A[4][6],i[0-n]
+
+	Para (i=0; i<4; i++) hacer
+		Para (j=0; i<6; j++) hacer
+		<<"A[",i,"][",j,"] :"
+		>>A[i][j]
+		Fin_Para
+	Fin_Para
+
+	<<"La matriz A es:"
+	Para (i=0; i<4; i++) hacer
+		Para (j=0; i<6; j++) hacer
+			<<A[i][j]," "
+		Fin_Para
+		<<" "
+	Fin_Para
+
+	//Verificar fibonacci
+
+	conta=0;
+	Para (i=0; i<4; i++) hacer
+		Para (j=0; i<6; j++) hacer
+		a=0
+		b=1
+		sw=0
+
+		Hacer
+			c=a+b
+			Si (A[i][j] <= 3) entonces
+				sw=1
+			Fin_Si
+				Sino hacer
+					Si(c==A[i][j]) entonces
+						sw=1
+					Fin_Si
+				Fin_Sino
+			a=b
+			b=c	
+
+		Hasta(c < A[i][j] && sw==0)
+
+		Si (sw==1) entonces
+			conta++	
+		Fin_Si	
+		Fin_Para
+	Fin_Para
+	<<"Total encontrados ",conta
+Fin
+

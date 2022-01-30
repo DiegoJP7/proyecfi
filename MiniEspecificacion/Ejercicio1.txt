@@ -1,0 +1,32 @@
+Ejercicio1
+Programa Para Buscar el digito 2 ennun vector de n numeros
+
+Inicio
+	//Variables
+	n,i,conta, num, digito i[0-n]
+	<<"Ingrese el tamaño del vector :"
+	>>n
+
+	A[n],i[0-n]
+
+	//Ingreso de datos al vector
+
+	Para (i=0; i<n; i++) hacer
+		<<"Ingrese numero del vector A:"
+		>>A[i]
+	Fin_Para
+
+	//Cuenta el digito 2
+	Para (i=0; i<n; i++) hacer
+		num = A[i]
+		Mientras (num > 0) hacer
+			digito = num%10
+			Si (digito==2) entonces
+			conta++
+			Fin_Si
+			num=num/10
+		Fin_Mientras	
+	Fin_para
+
+	<<"El 2 se repite ",conta," veces"	
+Fin	

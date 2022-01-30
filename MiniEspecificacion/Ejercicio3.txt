@@ -1,0 +1,58 @@
+Ejercicio3
+Inicio
+	//Variables
+	n,i,j i[0-n]
+	//Ingrese los elementos de la matriz
+	A[3][4],i[0-n]
+
+	Para (i=0; i<3; i++) hacer
+		Para (j=0; i<4; j++) hacer
+		<<"A[",i,"][",j,"] :"
+		>>A[i][j]
+
+		Fin_Para
+	Fin_Para
+
+	<<"La matriz A es:"	
+	Para (i=0; i<3; i++) hacer
+		Para (j=0; i<4; j++) hacer
+			<<A[i][j], " "
+		Fin_Para
+		<<" "
+	Fin_Para
+	<<"Resultado:, contar(A)) "
+
+	esPrimo(i[0-n] num)
+	k<-2 i[0-n]
+	boolean primo<-true
+		Mientras (k <= num/2) hacer
+			Si(num%k == 0) entonces
+			primo=false
+			Fin_si
+			k++
+		Hasta
+	Fin_esPrimo
+
+	contar(i[0-n] [][] B)
+		i,j,conta=0 i[0-n]
+		mayor i[0-n]
+		Para (i=0; i<3; i++) hacer
+			Para (j=0; j<4; j++) hacer
+				Si (B[i][j] > mayor) entonces
+					mayor = B[i][j]
+				Fin_Si
+			Fin_Para
+		Fin_Para
+
+		<<"Mayor numero primo es " ,mayor
+		Para (i=0; i<3; i++) hacer
+			Para (j=0; j<4; j++) hacer
+				Si (B[i][j]==mayor) entonces
+					conta=conta+1
+				Fin_Si
+			Fin_Para
+		Fin_Para
+		regresar conta
+	Fin_contar
+Fin
+		

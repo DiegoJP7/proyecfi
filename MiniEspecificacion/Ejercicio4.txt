@@ -1,0 +1,65 @@
+Ejercicio4
+Inicio
+	//Variables
+	n,i,j,k,conta,conta1 i[0-n]
+
+	<<"Ingrese el tamaño de la matriz :"
+	>>n
+
+	A[n][n],i[0-n]
+	vec[n * n],i[0-n]
+	aux[n * n],i[0-n]
+
+	Para (i=0; i<n; i++) hacer
+		Para (j=0; j<n; j++) hacer
+			<<"A[",i,"][",j,"] :"
+			>>A[i][j]
+		Fin_Para
+	Fin_Para
+
+	<<"La matriz A es:"
+	k=0
+	Para (i=0; i<n; i++) hacer
+		Para (j=0; j<n; j++) hacer
+			<<A[i][j] ," "
+			vec[k] = A[i][j]
+			k=k+1
+		Fin_Para
+		<<""
+	Fin_Para
+
+	conta1=0
+	conta=0
+
+	existe, bool
+	Para (i=0; i<vec.length; i++) hacer
+		existe=falso
+		Para (j=0; j<vec.length; j++) hacer
+			Si(vec[i] == vec[j])entonces
+				existe=verdadero
+			Fin_Si
+		Fin_Para
+		si(existe=falso)entonces
+			aux[conta1] = vec[i]
+            conta1=conta1+1
+        Fin_si        
+	Fin_Para
+	//Salida
+
+	<<"Elementos que no se repiten "
+	Para (i=0; i<conta1; i++) hacer
+		conta=0
+		Para (j=0; j<vec.length; j++) hacer
+			Si(aux[i] == vec[j])entonces
+				conta=conta+1
+			Fin_Si
+		Fin_Para
+		Si(conta == 1)entonces
+		<<aux[i] ,", "
+		Fin_Si
+	Fin_Para
+
+
+
+
+
